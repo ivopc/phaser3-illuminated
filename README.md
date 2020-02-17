@@ -1,6 +1,9 @@
 # phaser3-illuminated
 Phaser 3 plugin using Illuminated.js lib to real-time light effects on WebGL web games.
 
+# Real world example
+You can see  [full-featured in a real game example](https://drive.google.com/open?id=1FkbCQP3o5Cw0bUnVSQuev9vbT4VIhfcU) , or can see the simple repo example.
+
 # Usage
 Don't forget to include the Illuminated.js (is in /src/illuminated.js) lib in your HTML document.
 
@@ -61,10 +64,14 @@ Create the mask overlay. In color use only rgba color.
 Create object to make rect shadows.
 
 ### scene.illuminated.createDiscObject(centerX, centerY, radius)
-Create object to make circluar shadows.
+Create object to make circular shadows.
 ### lamp.createLighting(opaqueObjects)
 In opaqueObjects just add a array of rectangle objects or disc objects or both.
+
 
 For more detail check the examples/script.js in repository, the code is fully commented.
 
 
+# License
+
+phaser3-illuminated is released under the [MIT License](https://opensource.org/licenses/MIT).
