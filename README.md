@@ -18,7 +18,6 @@ In the game instance (preload) add a load plugin like this (the file is in /src/
         url: "path/to/illuminated.p3.js",
         sceneKey: "illuminated"
     });
-};
 ```
 In create add this:
 ```javascript
