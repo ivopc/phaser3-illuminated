@@ -2,13 +2,13 @@
 Phaser 3 plugin using Illuminated.js lib to real-time light effects on WebGL web games.
 
 # Usage
-Don't forget to include the Illuminated.js lib in your HTML document.
+Don't forget to include the Illuminated.js (is in /src/illuminated.js) lib in your HTML document.
 
 ```html
 <script type="text/javascript" src="Illuminated.js"></script>
 ```
 
-In the game instance (preload) add a load plugin like this:
+In the game instance (preload) add a load plugin like this (the file is in /src/illuminated.p3.js):
 ```javascript
     this.load.scenePlugin({
         key: "IlluminatedJS",
@@ -51,17 +51,20 @@ In create add this:
 
 # Configuration
 
-# scene.illuminated.createLamp(x, y, config)
-The config object details, you can read about [here](http://greweb.me/2012/05/illuminated-js-2d-lights-and-shadows-rendering-engine-for-html5-applications/)
+### scene.illuminated.createLamp(x, y, config)
+Create the illumination sprite. The config object details, you can read about [here](http://greweb.me/2012/05/illuminated-js-2d-lights-and-shadows-rendering-engine-for-html5-applications/)
 
-# scene.illuminated.createDarkMask(lampsArray, dimensions, color)
-In color use only rgba color.
+### scene.illuminated.createDarkMask(lampsArray, dimensions, color)
+Create the mask overlay. In color use only rgba color.
 
-# scene.illuminated.createRectangleObject(x, y, width, height);
+### scene.illuminated.createRectangleObject(x, y, width, height)
+Create object to make rect shadows.
 
-# scene.illuminated.createDiscObject(centerX, centerY, radius)
-
-# lamp.createLighting(opaqueObjects)
+### scene.illuminated.createDiscObject(centerX, centerY, radius)
+Create object to make circluar shadows.
+### lamp.createLighting(opaqueObjects)
 In opaqueObjects just add a array of rectangle objects or disc objects or both.
 
-For more detail check the examples/script.js on repository.
+For more detail check the examples/script.js in repository, the code is fully commented.
+
+
