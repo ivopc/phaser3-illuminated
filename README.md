@@ -2,7 +2,7 @@
 Phaser 3 plugin using Illuminated.js lib to real-time light effects on WebGL web games.
 
 # Real world example
-You can see  [full-featured in a real game example](https://drive.google.com/open?id=1FkbCQP3o5Cw0bUnVSQuev9vbT4VIhfcU), or just check the simple repo example.
+You can see  [full-featured in a real game example](https://drive.google.com/open?id=1FkbCQP3o5Cw0bUnVSQuev9vbT4VIhfcU), or just check the simple example in examples folder.
 
 # Usage
 Don't forget to include the Illuminated.js (is in /src/illuminated.js) lib in your HTML document.
