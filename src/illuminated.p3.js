@@ -21,6 +21,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             this.scene = scene;
 
             this.occlusionCulling = true;
+            
+            this.fetchCachedImage();
         }
 
         fetchCachedImage () {
@@ -29,9 +31,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             
             const img = new Image();
             img.src = lampsEdge[0];
-
-            this.scene.textures.addImage("p_illuminated-lamp-edge-0", img);
-
+            img.addEventListener("load", () => {
+                this.scene.textures.addImage("p_illuminated-lamp-edge-0", img);
+            });
         }
 
         boot () {
@@ -40,7 +42,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             //eventEmitter.on("shutdown", this.shutdown, this);
             //eventEmitter.on("destroy", this.destroy, this);
 
-            this.fetchCachedImage();
         }
 
         postUpdate () {
