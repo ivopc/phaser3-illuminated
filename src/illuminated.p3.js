@@ -79,10 +79,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         createDarkMask (lamps, maskSize, color) {
 
             lamps = lamps || this.illuminatedSprites;
+            
+            const uniqueTexture = Date.now() + Math.random();
 
             // layer mask texture
             const texture = this.scene.textures.createCanvas(
-                "illuminated-darkmask",
+                "illuminated-darkmask" + uniqueTexture,
                 maskSize.width,
                 maskSize.height
             );
@@ -183,7 +185,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             y = y || 0;
 
             // unique texture to lamp sprite
-            const uniqueTexture = Date.now();
+            const uniqueTexture = Date.now() + Math.random();
 
             config = config || {};
             config.distance = config.distance || 200;
